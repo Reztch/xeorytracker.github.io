@@ -1,1 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500&display=swap');
 
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+
+body{
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #0d0d0d;
+}
+
+
+.container{
+  position: relative;
+  max-width: 460px;
+  width: 100%;
+  background: #fff;
+  border-radius: 10px;
+  border-top-left-radius: 0;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.container .form{
+  padding: 35px;
+  
+}
+
+
+.container .form .title{
+  position: relative;
+  font-size: 30px;
+  font-weight: 600;
+}
+
+
+.form .title::before{
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -1;
+  height: 3px;
+  width: 60px;
+  background-color: #d10000ff;
+  border-radius: 25px;
+}
+
+
+.container::before{
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -1;
+  height: 3px;
+  width: 400px;
+  background-color: #bd0000ff;
+}
+
+
+.form .input-field{
+  background-color: #ff5757;
+  position: relative;
+  height: 50px;
+  width: 100%;
+  margin-top: 25px;
+}
+
+
+.input-field input{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  padding: 0 35px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  border-bottom: 3px solid #ccc;
+  border-top: 3px solid transparent;
+  transition: all 0.2s ease;
+}
+
+
+.input-field input:is(:focus, :valid){
+  border-bottom-color: #ff4242
+}
+
+
+
+.input-field i{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #ccc;
+  font-size: 23px;
+}
+
+.input-field input:is(:focus, :valid) ~ i{
+  color: #ff4242
+}
+
+
+.input-field i.icon{
+  left: 0;
+}
+
+.input-field i.showHidePw{
+  right: 0;
+}
